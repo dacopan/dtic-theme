@@ -1,3 +1,5 @@
+package io.dacopancm.dt1ctheme;
+
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
