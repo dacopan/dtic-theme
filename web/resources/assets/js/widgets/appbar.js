@@ -1,7 +1,7 @@
 $.widget("metro.appbar", {
     version: "3.0.0",
     options: {
-        flexstyle: "app-bar-menu", //app-bar-menu | YOUR_OWN class for the pull flexmenu, basic support for "sidebar2" are integrated in the appbar.less file
+        flexstyle: "ui-menu-list", //app-bar-menu | YOUR_OWN class for the pull flexmenu, basic support for "sidebar2" are integrated in the appbar.less file
         flexclean: false, //true | false. if set all entries except the no-flexible ones will removed
         flextolerance: 3               //in px. if set the freespace is runnig out a little bit earlier, so floats 
                 //and not no-wrap elements have no chance to wrap. help for rounding errors also
@@ -274,7 +274,7 @@ $.widget("metro.appbar", {
         that.lastFlexAction = undefined;
 
         that.pullButton = $(element).find('.app-bar-pullbutton');
-        var menus = $(element).find('.app-bar-menu');
+        var menus = $(element).find('.ui-menu-list.ui-helper-reset');
 
         that.initiatedAsFlex = false;   //we change it later in the code - conditionally
         o.flexclean = $(element).is("[data-flexclean='true']") || o.flexclean;
@@ -332,7 +332,7 @@ $.widget("metro.appbar", {
                 });
 
                 //find the parent, which contains all menus
-                that.menusParent = $(element).find(".app-bar-menu").first().parent();
+                that.menusParent = $(element).find(".ui-menu-list.ui-helper-reset").first().parent();
 
                 // === create a pull down button + pull menu ===
                 //check if a pulldown button already exists, if not we create one
@@ -343,7 +343,7 @@ $.widget("metro.appbar", {
                 }
 
                 //create a pullmenu
-                that.pullMenu = $('<nav class="app-bar-pullmenu hidden" />');
+                that.pullMenu = $('<nav class="app-bar-pullmenu ui-menubar hidden" />');
 
                 //create menubars within the pullmenu
                 that.flexVisibles.each(function () {
@@ -374,7 +374,7 @@ $.widget("metro.appbar", {
                 $(that.pullButton).on("click", function () {
 
                     //who am i?
-                    that = $(this).closest("[data-role=appbar]").data("appbar");
+                    that = $(this).closest("[role=menubar]").data("appbar");
 
                     //we show /hide the pullmenu
                     if ($(that.pullMenu).is(":hidden")) {
@@ -393,7 +393,7 @@ $.widget("metro.appbar", {
 
                 //we have to calculate everything new, if the user resizes or zooms the window
                 $(window).resize(function () {
-                    $("[data-role=appbar]:not(.no-flexible)").each(function () {
+                    $("[role=menubar]:not(.no-flexible)").each(function () {
                         $(this).data("appbar").resize();
                     });
                 });
@@ -402,16 +402,16 @@ $.widget("metro.appbar", {
                 //because fonts(also icon-fonts) are often loaded async after the page has loaded and this script walked through already, 
                 //we have to check again after these elements loaded. Because there is no way to observe only specific elements, we do it for the window
                 $(window).load(function () {
-                    $("[data-role=appbar]:not(.no-flexible)").each(function () {
+                    $("[role=menubar]:not(.no-flexible)").each(function () {
                         $(this).data("appbar").resize();
                     });
                 });
 
                 //pictures (or other outside stuff was loaded - pictures are also often loaded async or have a lazy load or are injected after a while. 
                 //a picture can change a size of the element from the appbar, so we must recheck it again.
-                $("[data-role=appbar]:not(.no-flexible) [src]").on("load", function () {
+                $("[role=menubar]:not(.no-flexible) [src]").on("load", function () {
                     //who am i?
-                    var appbar = $(this).closest("[data-role=appbar]").data("appbar");
+                    var appbar = $(this).closest("[role=menubar]").data("appbar");
                     appbar.resize();
                 });
             }

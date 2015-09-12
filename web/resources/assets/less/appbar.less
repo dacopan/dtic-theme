@@ -63,7 +63,7 @@
         & > li, & > li > a {
             .ui-menubar > .app-bar-element;
 
-            
+
             &.ui-submenu-link {
                 padding-right: 1.5rem;
                 &:before {
@@ -212,7 +212,7 @@
                 .transition(.3s);
             }
 
-            &.ui-state-hover {
+            &.ui-state-active {
                 &:before {
                     .rotate135;
                     .transition(.3s);
@@ -222,7 +222,7 @@
 
         .ui-menu-child {
             .ui-submenu-link {
-                &.ui-state-hover {
+                &.ui-state-active {
                     &:before {
                         .rotate45;
                     }
@@ -276,36 +276,11 @@
                 &:before {
                     border-color: #323232; //TODO: make this as variable as soon the sidebar colors are styled with variables
                 }
-            }
-            .sidebar2 {
-                li {
-                    &:hover {
-                        background-color: @appBarBackground;
-                    }
-                    .input-control {
-                        text-align: center;
-                        display: block;
-                        margin: 0.325rem;
-                    }
-                }
-
-                li {
-                    &:hover {
-                        a {background-color: @appBarBackground;}
-                    }
-                }
-                li li:not(:hover) {
-                    color: @dark ;
-
-                    a {
-                        background-color: @white;
-                    }
-                }
-            }
+            }            
         }
 
         //default style of the pullmenu
-        .app-bar-menu {
+        .ui-menu-list {
             width: 100%;
             border-top: 1px solid @appBarDividerColor;
             position: relative;
@@ -323,8 +298,8 @@
             }
 
             li:hover {
-                background-color: @appBarBackground;
-                a {
+                background-color: transparent;
+                & >  a {
                     background-color: @appBarBackground;
                     color: @white;
                 }
@@ -341,17 +316,25 @@
                 box-shadow: none;
                 max-width: 100%;
                 background-color: @appBarBackgroundActive;
-
+                top: 0!important;
+                left: 0!important;
                 li {
                     width: 100%;
                     background-color: inherit;
 
                     a {
-                        padding-left: 20px;
+                        //padding-left: 20px;
                         padding-right: 0;
                         background-color: inherit;
                         width: 100%;
                         color: @white;
+                    }
+                    &:not(.disabled):hover {
+                        background-color: transparent;
+                        &>  a {
+                            background-color: @appBarBackground;
+                            color: @white;
+                        }
                     }
                 }
 
@@ -367,8 +350,8 @@
                 }
 
                 .ui-menu-child {
-                    top: 0;
-                    left: 0;
+                    top: 0!important;
+                    left: 0!important;
                 }
             }
         }

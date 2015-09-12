@@ -4290,13 +4290,13 @@ hr.fat {
 .ui-menubar > ul.ui-menu-list > li > a .ui-submenu-link:before {
   transition: all 0.3s ease;
 }
-.ui-menubar > ul.ui-menu-list > li .ui-submenu-link.ui-state-hover:before,
-.ui-menubar > ul.ui-menu-list > li > a .ui-submenu-link.ui-state-hover:before {
+.ui-menubar > ul.ui-menu-list > li .ui-submenu-link.ui-state-active:before,
+.ui-menubar > ul.ui-menu-list > li > a .ui-submenu-link.ui-state-active:before {
   transform: rotate(135deg);
   transition: all 0.3s ease;
 }
-.ui-menubar > ul.ui-menu-list > li .ui-menu-child .ui-submenu-link.ui-state-hover:before,
-.ui-menubar > ul.ui-menu-list > li > a .ui-menu-child .ui-submenu-link.ui-state-hover:before {
+.ui-menubar > ul.ui-menu-list > li .ui-menu-child .ui-submenu-link.ui-state-active:before,
+.ui-menubar > ul.ui-menu-list > li > a .ui-menu-child .ui-submenu-link.ui-state-active:before {
   transform: rotate(45deg);
 }
 .ui-menubar > ul.ui-menu-list > li.ui-submenu-link,
@@ -4424,13 +4424,13 @@ hr.fat {
 .ui-menubar > ul .ui-submenu-link:before {
   transition: all 0.3s ease;
 }
-.ui-menubar .app-bar-element .ui-submenu-link.ui-state-hover:before,
-.ui-menubar > ul .ui-submenu-link.ui-state-hover:before {
+.ui-menubar .app-bar-element .ui-submenu-link.ui-state-active:before,
+.ui-menubar > ul .ui-submenu-link.ui-state-active:before {
   transform: rotate(135deg);
   transition: all 0.3s ease;
 }
-.ui-menubar .app-bar-element .ui-menu-child .ui-submenu-link.ui-state-hover:before,
-.ui-menubar > ul .ui-menu-child .ui-submenu-link.ui-state-hover:before {
+.ui-menubar .app-bar-element .ui-menu-child .ui-submenu-link.ui-state-active:before,
+.ui-menubar > ul .ui-menu-child .ui-submenu-link.ui-state-active:before {
   transform: rotate(45deg);
 }
 .ui-menubar.fixed-top,
@@ -4504,11 +4504,11 @@ hr.fat {
 .ui-menubar .app-bar-pullbutton .ui-submenu-link:before {
   transition: all 0.3s ease;
 }
-.ui-menubar .app-bar-pullbutton .ui-submenu-link.ui-state-hover:before {
+.ui-menubar .app-bar-pullbutton .ui-submenu-link.ui-state-active:before {
   transform: rotate(135deg);
   transition: all 0.3s ease;
 }
-.ui-menubar .app-bar-pullbutton .ui-menu-child .ui-submenu-link.ui-state-hover:before {
+.ui-menubar .app-bar-pullbutton .ui-menu-child .ui-submenu-link.ui-state-active:before {
   transform: rotate(45deg);
 }
 .ui-menubar .app-bar-pullbutton {
@@ -4528,24 +4528,7 @@ hr.fat {
 .ui-menubar .app-bar-pullmenu.flexstyle-sidebar2 .ui-submenu-link:before {
   border-color: #323232;
 }
-.ui-menubar .app-bar-pullmenu.flexstyle-sidebar2 .sidebar2 li:hover {
-  background-color: #0072c6;
-}
-.ui-menubar .app-bar-pullmenu.flexstyle-sidebar2 .sidebar2 li .input-control {
-  text-align: center;
-  display: block;
-  margin: 0.325rem;
-}
-.ui-menubar .app-bar-pullmenu.flexstyle-sidebar2 .sidebar2 li:hover a {
-  background-color: #0072c6;
-}
-.ui-menubar .app-bar-pullmenu.flexstyle-sidebar2 .sidebar2 li li:not(:hover) {
-  color: #575756;
-}
-.ui-menubar .app-bar-pullmenu.flexstyle-sidebar2 .sidebar2 li li:not(:hover) a {
-  background-color: #ffffff;
-}
-.ui-menubar .app-bar-pullmenu .app-bar-menu {
+.ui-menubar .app-bar-pullmenu .ui-menu-list {
   width: 100%;
   border-top: 1px solid #4c9cd7;
   position: relative;
@@ -4555,21 +4538,21 @@ hr.fat {
   background-color: #005696;
   clear: both;
 }
-.ui-menubar .app-bar-pullmenu .app-bar-menu > li,
-.ui-menubar .app-bar-pullmenu .app-bar-menu > li > a {
+.ui-menubar .app-bar-pullmenu .ui-menu-list > li,
+.ui-menubar .app-bar-pullmenu .ui-menu-list > li > a {
   float: none;
 }
-.ui-menubar .app-bar-pullmenu .app-bar-menu > li {
+.ui-menubar .app-bar-pullmenu .ui-menu-list > li {
   height: auto;
 }
-.ui-menubar .app-bar-pullmenu .app-bar-menu li:hover {
-  background-color: #0072c6;
+.ui-menubar .app-bar-pullmenu .ui-menu-list li:hover {
+  background-color: transparent;
 }
-.ui-menubar .app-bar-pullmenu .app-bar-menu li:hover a {
+.ui-menubar .app-bar-pullmenu .ui-menu-list li:hover > a {
   background-color: #0072c6;
   color: #ffffff;
 }
-.ui-menubar .app-bar-pullmenu .app-bar-menu .ui-menu-child {
+.ui-menubar .app-bar-pullmenu .ui-menu-list .ui-menu-child {
   border: 0;
   border-top: 1px solid #4c9cd7;
   clear: both;
@@ -4580,28 +4563,36 @@ hr.fat {
   box-shadow: none;
   max-width: 100%;
   background-color: #005696;
+  top: 0!important;
+  left: 0!important;
 }
-.ui-menubar .app-bar-pullmenu .app-bar-menu .ui-menu-child li {
+.ui-menubar .app-bar-pullmenu .ui-menu-list .ui-menu-child li {
   width: 100%;
   background-color: inherit;
 }
-.ui-menubar .app-bar-pullmenu .app-bar-menu .ui-menu-child li a {
-  padding-left: 20px;
+.ui-menubar .app-bar-pullmenu .ui-menu-list .ui-menu-child li a {
   padding-right: 0;
   background-color: inherit;
   width: 100%;
   color: #ffffff;
 }
-.ui-menubar .app-bar-pullmenu .app-bar-menu .ui-menu-child .ui-submenu-link:before {
+.ui-menubar .app-bar-pullmenu .ui-menu-list .ui-menu-child li:not(.disabled):hover {
+  background-color: transparent;
+}
+.ui-menubar .app-bar-pullmenu .ui-menu-list .ui-menu-child li:not(.disabled):hover > a {
+  background-color: #0072c6;
+  color: #ffffff;
+}
+.ui-menubar .app-bar-pullmenu .ui-menu-list .ui-menu-child .ui-submenu-link:before {
   border-color: #ffffff;
   transform: rotate(-45deg);
 }
-.ui-menubar .app-bar-pullmenu .app-bar-menu .ui-menu-child .divider {
+.ui-menubar .app-bar-pullmenu .ui-menu-list .ui-menu-child .divider {
   background-color: #4c9cd7;
 }
-.ui-menubar .app-bar-pullmenu .app-bar-menu .ui-menu-child .ui-menu-child {
-  top: 0;
-  left: 0;
+.ui-menubar .app-bar-pullmenu .ui-menu-list .ui-menu-child .ui-menu-child {
+  top: 0!important;
+  left: 0!important;
 }
 .ui-menubar > .container {
   padding: 0 !important;
@@ -4958,7 +4949,7 @@ hr.fat {
 }
 .v-menu li:hover {
   text-decoration: none;
-  background: #0096f0;
+  background-color: #0096f0;
 }
 .v-menu li:hover > a,
 .v-menu li:hover .ui-icon {
@@ -5114,7 +5105,7 @@ hr.fat {
 .ui-menu .ui-menu-child li:hover,
 .ui-menu.ui-menu-dynamic .ui-menu-list li:hover {
   text-decoration: none;
-  background: #0096f0;
+  background-color: #0096f0;
 }
 .ui-menu .ui-menu-child li:hover > a,
 .ui-menu.ui-menu-dynamic .ui-menu-list li:hover > a,
@@ -6883,7 +6874,7 @@ a.shortcut-button {
 /*@import "pagination";
 @import "breadcrumbs";
 @import "inputs";
-@import "progressbar";  
+@import "progressbar";
 @import "popovers";
 @import "windows";
 @import "lists";

@@ -8,9 +8,11 @@
     };
     $.Metro.initAppBar = function (area) {
         if (area != undefined) {
-            $(area).find('[data-role=appbar]').appbar();
+            $(area).find('[role=menubar]').appbar();
+            console.log($(area).find('[role=menubar]'));
         } else {
-            $('[data-role=appbar]').appbar();
+            console.log($('[role=menubar]'));
+            $('[role=menubar]').appbar();
         }
     };
 
