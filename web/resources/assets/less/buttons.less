@@ -102,26 +102,38 @@ a.ui-button, a.round-button, a.square-button {
     &:hover {text-decoration: none;}
 }
 
-.ui-splitbutton, .dropdown-button {
-    .ui-splitbutton-menubutton {
-        &:hover {
-            background-color: @grayLighter;
-            border-color: darken(@inputHoverState, 10%);
-        }
 
-        &:before {
-            .transition(.3s);
-            left: 90%;
-        }
-
-        &.ui-state-focus {
-            &:before {
-                .rotate135;                    
-            }
-        }        
+.ui-splitbutton-menubutton{
+    &:hover {
+        background-color: @grayLighter;
+        border-color: darken(@inputHoverState, 10%);
     }
 
+    &:before {
+        //.transition(.3s);
+        left: 90%;
+    }
+
+    &.ui-state-focus {
+        &:before {
+            .rotate135;                    
+        }
+    }        
 }
+
+.ui-menubutton .ui-button{    
+    &:before {        
+        left: 0;
+        margin-left: 15px;
+    }
+
+    &.ui-state-focus {
+        &:before {
+            .rotate135;                    
+        }
+    } 
+}
+
 
 .mini-button {
     font-size: .6rem;

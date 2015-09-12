@@ -3,7 +3,7 @@
 //@import (once) "scheme-builder";
 
 
-.ui-menubar {
+.ui-menubar{
     display: block;
     width: 100%;
     position: relative;
@@ -14,7 +14,7 @@
     .no-user-select;
     .clear-float;
 
-    .ui-menuitem {
+    .app-bar-element {
         line-height: 3.125rem;
         padding: 0 .625rem;
         font-size: 1rem;
@@ -54,15 +54,15 @@
         }
     }
 
-    & > .ui-menu-list {
+    &>ul.ui-menu-list  {
         display: block;
         float: left;
         margin: 0;
         padding: 0;
 
-        & > li, & > li > a{
-            .ui-menubar > .ui-menuitem;
-            
+        & > li, & > li > a {
+            .ui-menubar > .app-bar-element;
+
             
             &.ui-submenu-link {
                 padding-right: 1.5rem;
@@ -80,7 +80,7 @@
         & > li .ui-menu-child {
             top: 100%;
             border: 2px solid @appBarBackgroundActive;
-            padding: 0;
+            .no-padding;
             li:not(.disabled):hover {
                 background-color: #eee;
                 & > a {
@@ -91,7 +91,7 @@
             .ui-menu-child {
                 top: -.625rem;
                 left: 100%;
-                padding: 0;
+                .no-padding;
             }
             .ui-submenu-link {
                 &:before {
@@ -135,7 +135,7 @@
     }
 }
 
-.app-bar {
+.ui-menubar{
     .app-bar-drop-container {
         position: absolute;
         top: 100%;
@@ -175,7 +175,7 @@
 }
 
 // Form Elements
-.app-bar {
+.ui-menubar{
     .app-bar-element {
         .clear-float;
         & > .input-control.text, & > .input-control.password {
@@ -205,51 +205,14 @@
     }
 }
 
-.app-bar {
-    &.drop-up {
-        .app-bar-drop-container {
-            top: auto;
-            bottom: 3.75rem;
-
-            &:before {
-                top: auto;
-                bottom: 1px;
-                .rotate(225deg);
-            }
-        }
-
-        .app-bar-menu {
-            & > li > .d-menu {
-                top: auto;
-                bottom: 3.125rem;
-            }
-        }
-
-        .app-bar-element {
-            & > .d-menu {
-                top: auto;
-                bottom: 3.125rem;
-            }
-        }
-
-        .app-bar-menu li .d-menu, .app-bar-element .d-menu {
-            .d-menu {
-                top: auto ;
-                bottom: 0;
-            }
-        }
-
-    }
-}
-
-.app-bar {
-    .app-bar-element, .app-bar-menu {
-        .dropdown-toggle {
+.ui-menubar{
+    .app-bar-element, &>ul {
+        .ui-submenu-link {
             &:before {
                 .transition(.3s);
             }
 
-            &.active-toggle {
+            &.ui-state-hover {
                 &:before {
                     .rotate135;
                     .transition(.3s);
@@ -257,9 +220,9 @@
             }
         }
 
-        .d-menu {
-            .dropdown-toggle {
-                &.active-toggle {
+        .ui-menu-child {
+            .ui-submenu-link {
+                &.ui-state-hover {
                     &:before {
                         .rotate45;
                     }
@@ -269,7 +232,7 @@
     }
 }
 
-.app-bar {
+.ui-menubar{
     &.fixed-top, &.fixed-bottom {
         z-index: @zindexFixedNavbar;
         position: fixed;
@@ -284,12 +247,12 @@
 }
 
 //flexible
-.app-bar {
+.ui-menubar{
 
     overflow: visible;
     height: auto;
     .app-bar-pullbutton {
-        .app-bar .app-bar-element;
+        .ui-menubar.app-bar-element;
         float: right;
     }
 
@@ -309,7 +272,7 @@
             .app-bar-pullmenubar {
                 float: right;
             }
-            .dropdown-toggle {
+            .ui-submenu-link {
                 &:before {
                     border-color: #323232; //TODO: make this as variable as soon the sidebar colors are styled with variables
                 }
@@ -367,7 +330,7 @@
                 }
             }
 
-            .d-menu {
+            .ui-menu-child {
                 border: 0;
                 border-top: 1px solid @appBarDividerColor;
                 clear: both;
@@ -392,7 +355,7 @@
                     }
                 }
 
-                .dropdown-toggle {
+                .ui-submenu-link {
                     &:before {
                         border-color: @white;
                         .rotate(-45deg);
@@ -403,7 +366,7 @@
                     background-color: @appBarDividerColor;
                 }
 
-                .d-menu {
+                .ui-menu-child {
                     top: 0;
                     left: 0;
                 }
@@ -412,7 +375,7 @@
     }
 }
 
-.app-bar {
+.ui-menubar{
     & > .container {
         padding: 0 !important;
     }

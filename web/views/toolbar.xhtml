@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../templates/mainTemplate.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Dt1c Theme | Toolbar" />
+        </ui:define>
+        <ui:define name="content">
+            <h:form>
+                <!-- contenido de la página-->
+                <h1 class="adequate">Toolbar</h1>
+                <p:toolbar>
+                    <f:facet name="left">
+                        <div class="toolbar-section">
+                            <p:commandButton type="button" value="New" icon="fa fa-file-o" />
+                            <p:commandButton type="button" value="Open" icon="fa fa-folder-open" />
+                        </div>
+                        <div class="toolbar-section">
+                            <p:commandButton type="button" title="Save" icon="fa fa-save" />
+                            <p:commandButton type="button" title="Delete" icon="fa fa-trash" />
+                            <p:commandButton type="button" title="Print" icon="fa fa-print" />
+                        </div>
+                    </f:facet>
+
+                    <f:facet name="right">
+                        <p:menuButton value="Options">
+                            <p:menuitem value="Save" icon="fa fa-save" />
+                            <p:menuitem value="Update" icon="fa fa-refresh" />
+                            <p:menuitem value="Delete" ajax="false" icon="fa fa-close" />
+                            <p:menuitem value="Homepage" url="http://www.primefaces.org" icon="fa fa-link" />
+                        </p:menuButton>
+                    </f:facet>
+
+                </p:toolbar>
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
