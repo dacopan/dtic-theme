@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../templates/mainTemplate.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Dt1c Theme | Inputs" />
+        </ui:define>
+        <ui:define name="content">
+            <h:form id="form1">
+                <!-- contenido de la página-->
+                <h1>Inputs</h1>
+                <br/>
+                <h3>InputTextarea</h3>
+                <div class="input-control full-size">
+                    <p:inputTextarea id='textarea1' requiredMessage="Ingrese texto válido" rows="5" cols="30" 
+                                     required="true" placeholder="ingrese el texto aquí" 
+                                     counter="display" maxlength="10" counterTemplate="Quedan {0} caracteres" autoResize="false" />
+                    <h:outputText id="display" class="counter"/>
+                    <p:message for="textarea1" />
+                </div>
+
+                <!--****************************************************************************-->
+                <br/>
+                <hr class="thin"/>
+                <br/><br/>
+                <h3>Input Text</h3>
+
+                <div class="example" data-text="example">
+                    <div class="grid">
+                        <div class="row cells3">
+                            <div class="cell input-control">
+                                <p:outputLabel for="dd" value="Label" style="font-weight:bold"/>                    
+                                <p:inputText placeholder="placeholder" id="dd" value="#{validationView.doubleNumber}"                                              
+                                             converterMessage="Cannot convert to double.">
+                                    <f:validateDoubleRange minimum="5.5" maximum="8.5" />
+                                </p:inputText>
+                                <p:message for="dd" />
+                            </div>
+                            <div class="cell input-control">
+                                <p:outputLabel for="dd" value="Label:" style="font-weight:bold"/>                    
+                                <p:inputText id="dd2" value="#{validationView.doubleNumber}" 
+                                             converterMessage="Cannot convert to double. Cannot convert to double.">
+                                    <f:validateDoubleRange minimum="5.5" maximum="8.5" />
+                                </p:inputText>
+                                <p:message for="dd2" />
+                            </div>
+                            <div class="cell input-control">
+                                <p:outputLabel for="dd3" value="Read Only" style="font-weight:bold"/>                    
+                                <p:inputText id="dd3" value="read only value" 
+                                             readonly="true">                                    
+                                </p:inputText>                                
+                            </div>
+
+                        </div>
+                        <div class="row cells3">
+                            <div class="cell input-control">
+                                <p:outputLabel for="dd4" value="Disabled" style="font-weight:bold"/>                    
+                                <p:inputText id="dd4" value="Disabled only value" 
+                                             disabled="true">                                    
+                                </p:inputText>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--****************************************************************************-->
+                <br/>
+                <hr class="thin"/>
+                <br/><br/>
+                <h3>SelectBooleanButton</h3>
+                <div class="example" data-text="example">
+                    <div class="grid">
+                        <div class="row cells3">
+                            <div class="cell input-control">
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <br/><br/>
+                <p:commandButton value="Save" update="form1" icon="fa-check" class="primary" />
+
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
