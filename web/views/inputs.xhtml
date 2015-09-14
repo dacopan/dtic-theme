@@ -72,19 +72,63 @@
                 <br/>
                 <hr class="thin"/>
                 <br/><br/>
-                <h3>SelectBooleanButton</h3>
+                <h3>SelectBooleanCheckbox and SelectOneRadio</h3>
                 <div class="example" data-text="example">
                     <div class="grid">
-                        <div class="row cells3">
-                            <div class="cell input-control">
+                        <div class="row cells2">
+                            <div class="cell">
+                                <h5>Checkboxes</h5>
+                                <div class="input-control">
+                                    <h:outputLabel value="Basic " for="ch1_input" />
+                                    <p:selectBooleanCheckbox id="ch1" />
+                                </div>
+
+                                <br/>
+                                <label>Console:</label>
+                                <br/>
+                                <p:selectManyCheckbox id="basic" class="input-control">
+                                    <f:selectItem itemLabel="Xbox One" itemValue="Xbox One"/>
+                                    <f:selectItem itemLabel="PS4" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                </p:selectManyCheckbox>
 
                             </div>
 
+                            <div class="cell">
+                                <h5>Radio buttons</h5>
+                                <label>Console:</label>
+                                <p:selectOneRadio id="console">
+                                    <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+                                    <f:selectItem itemLabel="PS4" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                </p:selectOneRadio>
+                            </div>
 
                         </div>
                     </div>
                 </div>
 
+
+                <!--****************************************************************************-->
+                <br/>
+                <hr class="thin"/>
+                <br/><br/>
+                <h3>SelectOneMenu</h3>
+                <div class="example" data-text="example">
+                    <div class="grid">
+                        <div class="row cells3">                           
+                            <div class="cell input-control">
+                                <p:outputLabel for="om1">SelectOneMenu</p:outputLabel>
+                                <p:selectOneMenu id="om1" styleClass="full-size">
+                                    <f:selectItem itemLabel="Select One" itemValue="" />
+                                    <f:selectItem itemLabel="Xbox One" itemValue="Xbox One" />
+                                    <f:selectItem itemLabel="PS4" itemValue="PS4" />
+                                    <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
+                                </p:selectOneMenu>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <br/><br/>
                 <p:commandButton value="Save" update="form1" icon="fa-check" class="primary" />
 

@@ -293,9 +293,6 @@ a {
 .dt1c .fg-darker {
   color: #1d1d1d !important;
 }
-.dt1c .ui-icon {
-  text-indent: 0;
-}
 @font-face {
   font-family: 'dcmuce';
   src: url('primefaces-dtic_theme/fonts/dcmuce.eot?r2kd86');
@@ -2526,6 +2523,14 @@ hr.fat {
   text-decoration: underline;
   cursor: pointer;
 }
+.dt1c .ui-icon {
+  text-indent: 0;
+}
+.dt1c .ui-shadow {
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3) !important;
+  -moz-box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.3) !important;
+}
 .container {
   width: 960px;
   margin: 0 auto;
@@ -2589,6 +2594,7 @@ hr.fat {
   margin: 0;
   list-style: none inside none;
 }
+.ui-shadow,
 .shadow {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
 }
@@ -5244,7 +5250,8 @@ hr.fat {
 }
 .ui-submenu-link:before,
 .ui-splitbutton-menubutton:before,
-.ui-menubutton .ui-button:before {
+.ui-menubutton .ui-button:before,
+.input-control .ui-selectonemenu .ui-selectonemenu-trigger:before {
   display: block;
   position: absolute;
   vertical-align: middle;
@@ -7138,7 +7145,8 @@ a.shortcut-button {
 }
 .input-control input,
 .input-control textarea,
-.input-control select {
+.input-control select,
+.input-control .ui-selectonemenu {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
@@ -7152,15 +7160,18 @@ a.shortcut-button {
 .input-control input:focus,
 .input-control textarea:focus,
 .input-control select:focus,
+.input-control .ui-selectonemenu:focus,
 .input-control input:hover,
 .input-control textarea:hover,
-.input-control select:hover {
+.input-control select:hover,
+.input-control .ui-selectonemenu:hover {
   border-color: #787878;
   outline: none;
 }
 .input-control input:disabled,
 .input-control textarea:disabled,
-.input-control select:disabled {
+.input-control select:disabled,
+.input-control .ui-selectonemenu:disabled {
   background-color: #EBEBE4;
 }
 .input-control.textarea {
@@ -7278,6 +7289,199 @@ a.shortcut-button {
 }
 .input-control .ui-outputlabel.ui-state-required {
   color: #1ba1e2;
+}
+.input-control.ui-selectmanycheckbox label,
+.input-control.ui-selectoneradio label {
+  margin: -2px 15px 0px 2px !important;
+}
+.input-control .ui-chkbox .ui-chkbox-box {
+  width: 1.3rem;
+  height: 1.3rem;
+  background-color: #ffffff;
+  border: 1px #999999 solid;
+  padding: 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 0;
+}
+.input-control .ui-chkbox .ui-chkbox-box .ui-icon:before {
+  position: absolute;
+  vertical-align: middle;
+  color: transparent;
+  font-size: 0;
+  content: "";
+  height: .3125rem;
+  width: .565rem;
+  background-color: transparent;
+  border-left: .1875rem solid;
+  border-bottom: .1875rem solid;
+  border-color: transparent;
+  left: 50%;
+  top: 50%;
+  margin-left: -0.325rem;
+  margin-top: -0.365rem;
+  display: block;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  transition: all 0.2s linear;
+}
+.input-control .ui-chkbox .ui-chkbox-box .ui-icon-check:before {
+  border-color: #555555;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.input-control .ui-chkbox .ui-state-active {
+  border-color: #546e7a;
+}
+.input-control .ui-chkbox .ui-state-active .ui-icon:before {
+  border-color: #03a9f4;
+}
+.input-control .ui-chkbox .ui-state-focus {
+  outline: dotted 1px #778d9b;
+  outline-offset: 2px;
+}
+.input-control .ui-chkbox .ui-chkbox-label {
+  margin: 1px 15px 0px 5px !important;
+  font-size: 16px;
+  color: #546e7a;
+}
+.ui-selectoneradio label {
+  margin: 1px 15px 0px 0px !important;
+  color: #546e7a;
+  font-size: 16px;
+}
+.ui-radiobutton {
+  margin: 5px 5px 0px 0px !important;
+  cursor: pointer;
+}
+.ui-radiobutton .ui-radiobutton-box {
+  background: none;
+  box-shadow: none;
+  color: #a9a9a9;
+  border: solid 2px #546e7a;
+  box-sizing: content-box;
+}
+.ui-radiobutton .ui-state-hover,
+.ui-radiobutton .ui-state-active {
+  border: solid 2px #26c6da;
+}
+.ui-radiobutton .ui-state-focus {
+  outline: dotted 1px #778d9b;
+  outline-offset: 2px;
+}
+.ui-radiobutton .ui-radiobutton-icon {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-image: none !important;
+  width: 51px;
+  height: 51px;
+  position: absolute;
+  opacity: 0;
+  margin: -17px !important;
+}
+.ui-radiobutton .ui-state-active .ui-icon-bullet,
+.ui-radiobutton .ui-state-focus .ui-icon-bullet {
+  background-image: none !important;
+  background-color: #03a9f4;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  opacity: 1;
+  margin: 1px 0 0 1px !important;
+}
+.input-control .ui-selectonemenu,
+.input-control .ui-selectonemenu .ui-selectcheckboxmenu {
+  font-size: 16px !important;
+  padding: 0px 35px 0px 0px !important;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+.input-control .ui-selectonemenu.ui-state-focus {
+  background-color: #f5f5f5 !important;
+}
+.input-control .ui-selectonemenu .ui-selectonemenu-label {
+  width: 100% !important;
+  border-radius: 0px !important;
+}
+.input-control .ui-selectonemenu .ui-selectonemenu-trigger {
+  padding: 0px 12px !important;
+  font-size: 16px;
+  color: #ffffff !important;
+  text-shadow: none;
+  z-index: 100;
+  border-radius: 0px !important;
+  width: 35px;
+}
+.input-control .ui-selectonemenu .ui-selectonemenu-trigger.ui-state-hover,
+.input-control .ui-selectonemenu .ui-selectonemenu-trigger.ui-state-focus {
+  background-color: #e0e0e0;
+  border-bottom: solid 1px #03a9f4 !important;
+}
+.ui-selectonemenu-panel {
+  background-color: #ffffff;
+  overflow: hidden;
+  border-radius: 0px;
+  border: 1px #d9d9d9 solid;
+}
+.ui-selectonemenu-panel .ui-selectonemenu-list {
+  padding: 0px !important;
+  background-color: #ffffff;
+}
+.ui-selectonemenu-panel .ui-selectonemenu-list-item {
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  border-radius: 0px !important;
+  font-size: 14px;
+  margin: 0px 0px 1px !important;
+  color: #546e7a;
+  padding: 10px 14px !important;
+}
+.ui-selectonemenu-panel .ui-selectonemenu-item-group {
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  font-size: 14px;
+  -moz-border-radius: 0px !important;
+  margin: 0px !important;
+  color: #ffffff;
+  padding: 10px 14px !important;
+  background-color: #546e7a;
+  font-weight: normal !important;
+}
+.ui-selectonemenu-panel .ui-state-highlight {
+  color: #03a9f4 !important;
+  background-color: #f5f5f5;
+}
+.ui-selectonemenu-panel .ui-selectonemenu-item.ui-state-hover {
+  background-color: #f5f5f5;
+}
+.ui-selectonemenu-panel .ui-selectonemenu-table td {
+  border: solid 1px #f5f5f5 !important;
+  border-radius: 0px !important;
+  -webkit-border-radius: 0px !important;
+  font-size: 14px;
+  -moz-border-radius: 0px !important;
+  margin: 0px !important;
+  color: #546e7a;
+  padding: 14px 10px !important;
+}
+.ui-selectonemenu-panel tr.ui-state-highlight td {
+  color: #03a9f4 !important;
+  background-color: #f5f5f5;
 }
 .input-control.file input[type=file] {
   position: absolute;
@@ -7773,18 +7977,16 @@ input[type="submit"].link:active {
 */
 /*@import "flex";
 @import "scheme-builder";*/
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 12/09/2015, 12/09/2015 10:38:38
-    Author     : dtic
-*/
 .ui-splitbutton-menubutton:before,
-.ui-menubutton .ui-button:before {
+.ui-menubutton .ui-button:before,
+.ui-message-error {
   transition: all 0.3s ease;
+}
+.ui-selectonemenu-panel .ui-selectonemenu-item-group,
+.ui-selectonemenu-panel .ui-selectonemenu-list-item,
+.ui-selectonemenu-panel .ui-selectonemenu-item.ui-state-hover,
+.ui-selectonemenu-panel .ui-selectonemenu-table td {
+  transition: all 0.5s ease;
 }
 @media screen and (min-width: 1401px) {
   html {
@@ -8239,5 +8441,17 @@ and open the template in the editor.
   .no-pc {
     display: none !important;
   }
+}
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/09/2015, 14/09/2015 17:14:47
+    Author     : dtic
+*/
+.mayra {
+  color: red;
 }
 /*# sourceMappingURL=theme.css.map */
