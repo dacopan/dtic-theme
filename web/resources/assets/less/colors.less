@@ -2,7 +2,16 @@
 .color-rgba(@color, @a: 1) {background: rgba(red(@color), green(@color), blue(@color), @a) !important;}
 .fg-color(@color) {color: @color !important;}
 .bg-color(@color) {background: @color !important;}
+.op-color(@color, @opacity: .7){
+	background-color: rgba(red(@color), green(@color), blue(@color), @opacity) !important;
+}
 
+//opt
+.op-default {
+	background-color: rgba(red(@cyan), green(@cyan), blue(@cyan), .7);
+}
+
+.op-black {.op-color(@black)}
 // Colors : background
 .dt1c{
     .bg-black {.bg-color(@black)}

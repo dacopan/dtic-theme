@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../templates/mainTemplate.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Dt1c Theme | Images" />
+        </ui:define>
+        <ui:define name="content">
+            <h:form>
+                <!-- contenido de la página-->
+                <h1>Images</h1>
+                <!--****************************************************************************-->
+                <br/>
+                <hr class="thin"/>
+                <br/><br/>
+                <h3>Input Text</h3>
+
+                <div class="example" data-text="containers">
+                    <div class="grid no-margin-top">
+                        <div class="row cells6">
+                            <div class="cell">
+                                <h5>image-container</h5>
+                                <div class="image-container">
+                                    <div class="frame"><img src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg"/></div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <h5>&amp;.rounded</h5>
+                                <div class="image-container rounded">
+                                    <div class="frame"><img src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg"/></div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <h5>&amp;.bordered</h5>
+                                <div class="image-container bordered">
+                                    <div class="frame"><img src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg"/></div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <h5>&amp;.polaroid</h5>
+                                <div class="image-container polaroid">
+                                    <div class="frame"><img src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg"/></div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <h5>&amp;.handing</h5>
+                                <div class="image-container bordered handing image-format-hd">
+                                    <div class="frame"><img src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg"/></div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <h5>&amp;.handing.ani</h5>
+                                <div class="image-container bordered handing ani image-format-hd">
+                                    <div class="frame"><img src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg"/></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row cells3">
+                            <div class="cell">
+                                <h5>custom color overlay</h5>
+                                <div class="image-container">
+                                    <div class="frame"><img src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg"/></div>
+                                    <div class="image-overlay op-green">
+                                        <h2>Image title</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <h5>image-container with overlay</h5>
+                                <div class="image-container">
+                                    <div class="frame"><img src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg"/></div>
+                                    <div class="image-overlay">
+                                        <h2>Image title</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cell">
+                                <h5>image-container selected</h5>
+                                <div class="image-container element-selected">
+                                    <div class="frame"><img src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg"/></div>
+                                    <div class="image-overlay">
+                                        <h2>Image title</h2>
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
