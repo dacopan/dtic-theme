@@ -176,7 +176,7 @@ a {
   background: #ffffff !important;
 }
 .dt1c .bg-dorado {
-  background: #0096f0 !important;
+  background: #a28f23 !important;
 }
 .dt1c .bg-red {
   background: #e20613 !important;
@@ -208,6 +208,54 @@ a {
 .dt1c .bg-darker {
   background: #1d1d1d !important;
 }
+.dt1c .bg-steel {
+  background: #647687 !important;
+}
+.dt1c .bg-teal {
+  background: #00aba9 !important;
+}
+.dt1c .bg-lightOrange {
+  background: #ffc194 !important;
+}
+.dt1c .bg-lightRed {
+  background: #f9222f !important;
+}
+.dt1c .bg-lightGreen {
+  background: #7ad61d !important;
+}
+.dt1c .bg-lighterBlue {
+  background: #00ccff !important;
+}
+.dt1c .bg-darkOrange {
+  background: #bf5a15 !important;
+}
+.dt1c .bg-darkRed {
+  background: #9a1616 !important;
+}
+.dt1c .bg-darkGreen {
+  background: #128023 !important;
+}
+.dt1c .bg-darkCyan {
+  background: #1b6eae !important;
+}
+.dt1c .bg-grayLight {
+  background: #999999 !important;
+}
+.dt1c .bg-grayLighter {
+  background: #eeeeee !important;
+}
+.dt1c .bg-cyan {
+  background: #1ba1e2 !important;
+}
+.dt1c .bg-green {
+  background: #60a917 !important;
+}
+.dt1c .bg-orange {
+  background: #fa6800 !important;
+}
+.dt1c .bg-lightCyan {
+  background: #0096f0 !important;
+}
 .dt1c .fg-black,
 .dt1c .fg-hover-black:hover {
   color: #000000 !important;
@@ -218,7 +266,7 @@ a {
 }
 .dt1c .fg-dorado,
 .dt1c .fg-hover-dorado:hover {
-  color: #0096f0 !important;
+  color: #a28f23 !important;
 }
 .dt1c .fg-red,
 .dt1c .fg-hover-red:hover {
@@ -267,7 +315,7 @@ a {
   color: #ffffff !important;
 }
 .dt1c .fg-dorado {
-  color: #0096f0 !important;
+  color: #a28f23 !important;
 }
 .dt1c .fg-red {
   color: #e20613 !important;

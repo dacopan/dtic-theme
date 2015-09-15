@@ -3,12 +3,12 @@
 .fg-color(@color) {color: @color !important;}
 .bg-color(@color) {background: @color !important;}
 .op-color(@color, @opacity: .7){
-	background-color: rgba(red(@color), green(@color), blue(@color), @opacity) !important;
+    background-color: rgba(red(@color), green(@color), blue(@color), @opacity) !important;
 }
 
 //opt
 .op-default {
-	background-color: rgba(red(@cyan), green(@cyan), blue(@cyan), .7);
+    background-color: rgba(red(@cyan), green(@cyan), blue(@cyan), .7);
 }
 
 .op-black {.op-color(@black)}
@@ -26,7 +26,24 @@
     .bg-gray {.bg-color(@gray)}
     .bg-lightGray {.bg-color(@lightGray)}
     .bg-dark {.bg-color(@dark)}
-    .bg-darker {.bg-color(@darker)}
+    .bg-darker {.bg-color(@darker)}    
+    //
+    .bg-steel{.bg-color(@steel)}                  
+    .bg-teal{.bg-color(@teal)}  
+    .bg-lightOrange{.bg-color(@lightOrange)}  
+    .bg-lightRed{.bg-color(@lightRed)}  
+    .bg-lightGreen{.bg-color(@lightGreen)}  
+    .bg-lighterBlue{.bg-color(@lighterBlue)}  
+    .bg-darkOrange{.bg-color(@darkOrange)}  
+    .bg-darkRed{.bg-color(@darkRed)}  
+    .bg-darkGreen{.bg-color(@darkGreen)}  
+    .bg-darkCyan{.bg-color(@darkCyan)}  
+    .bg-grayLight{.bg-color(@grayLight)}  
+    .bg-grayLighter{.bg-color(@grayLighter)}  
+    .bg-cyan{.bg-color(@cyan)}  
+    .bg-green{.bg-color(@green)}  
+    .bg-orange{.bg-color(@orange)}  
+    .bg-lightCyan{.bg-color(@lightCyan)}  
 }
 
 // Colors : foreground

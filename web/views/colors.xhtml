@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../templates/mainTemplate.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Dt1c Theme | Colors" />
+        </ui:define>
+        <ui:define name="content">
+            <h:form>
+                <!-- contenido de la página-->
+                <h1>Colors</h1>
+
+                Dt1c Theme provides access to the main colors used in Windows 8. You can sets: background, text color, (outline, border color) for any elements.
+
+                <br/>
+                <br/>
+                <div class="example" data-text="colors">
+                    <h5>Predefined colors</h5>
+                    <ul class="unstyled-list color-list" id="bg-color-list"></ul>
+                    <ul class="no-visible no-display" id="bg-color-list1">
+                        <li>black</li>
+                        <li>white</li>
+                        <li>dorado</li>
+                        <li>red</li>
+                        <li>yellow</li>
+                        <li>darkBlue</li>
+                        <li>blue</li>
+                        <li>lightBlue</li>
+                        <li>extraLightBlue</li>
+                        <li>gray</li>
+                        <li>lightGray</li>
+                        <li>dark</li>
+                        <li>darker</li>
+
+                        <li>steel</li>                
+                        <li>teal</li>
+                        <li>lightOrange</li>
+                        <li>lightRed</li>
+                        <li>lightGreen</li>
+                        <li>lighterBlue</li>
+                        <li>darkOrange</li>
+                        <li>darkRed</li>
+                        <li>darkGreen</li>
+                        <li>darkCyan</li>
+                        <li>grayLight</li>
+                        <li>grayLighter</li>
+                        <li>cyan</li>
+                        <li>green</li>
+                        <li>orange</li>
+                        <li>lightCyan</li>
+
+
+                    </ul>
+                    <script>
+                        $(function () {
+                            var item, span;
+                            $.each($("#bg-color-list1 li"), function (i, v) {
+                                item = $("<li/>").addClass('bg-' + $(v).html() + ' fg-white padding10 text-shadow').html($(v).html()).appendTo($("#bg-color-list"));
+                            });
+                        });
+                    </script>
+                    <style type="text/css">
+                        .color-list li {
+                            display: inline-block;
+                            padding: 20px;
+                            width: 14.2857%;
+                        }
+                    </style>
+                </div>
+
+                <p>
+                    To set background color: use prefix <span class="tag">bg-</span>, to set foreground color: use prefix <span class="tag">fg-</span>, 
+                    <!--to set outline color: use prefix <span class="tag">ol-</span>, to set border color: use prefix <span class="tag">bd-</span>.-->
+                    Also you can set active, hover and focus colors with classes <span class="tag">bg(fg)-hover-*</span>, <span class="tag">bg(fg)-active-</span>.
+                    <!--Also you can change :before and :after color and background for element with classes: <span class="tag">before-bg-*</span>, <span class="tag">before-fg-*</span>, <span class="tag">after-bg-*</span>, <span class="tag">after-fg-*</span>.-->
+                </p>
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
