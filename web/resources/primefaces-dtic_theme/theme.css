@@ -4218,7 +4218,8 @@ hr.fat {
   margin: 0 !important;
 }
 .ui-menubar .app-bar-element:hover,
-.ui-menubar .app-bar-element:active {
+.ui-menubar .app-bar-element:active,
+.ui-menubar .app-bar-element.ui-menuitem-active {
   background-color: #005696;
 }
 .ui-menubar .app-bar-element.branding {
@@ -4260,7 +4261,9 @@ hr.fat {
 .ui-menubar > ul.ui-menu-list > li:hover,
 .ui-menubar > ul.ui-menu-list > li > a:hover,
 .ui-menubar > ul.ui-menu-list > li:active,
-.ui-menubar > ul.ui-menu-list > li > a:active {
+.ui-menubar > ul.ui-menu-list > li > a:active,
+.ui-menubar > ul.ui-menu-list > li.ui-menuitem-active,
+.ui-menubar > ul.ui-menu-list > li > a.ui-menuitem-active {
   background-color: #005696;
 }
 .ui-menubar > ul.ui-menu-list > li.branding,
@@ -4486,7 +4489,8 @@ hr.fat {
   float: right;
 }
 .ui-menubar .app-bar-pullbutton:hover,
-.ui-menubar .app-bar-pullbutton:active {
+.ui-menubar .app-bar-pullbutton:active,
+.ui-menubar .app-bar-pullbutton.ui-menuitem-active {
   background-color: #005696;
 }
 .ui-menubar .app-bar-pullbutton.branding {
@@ -4989,15 +4993,15 @@ hr.fat {
   width: auto;
   font-size: .8em;
 }
-.v-menu .divider {
+.v-menu .ui-separator {
   padding: 0;
   height: 1px;
   margin: 0 1px;
   overflow: hidden;
-  background-color: #f2f2f2;
+  background-color: #e5e5e5;
 }
-.v-menu .divider:hover {
-  background-color: #f2f2f2;
+.v-menu .ui-separator:hover {
+  background-color: #ffffff;
 }
 .v-menu .ui-menu-child {
   left: 100%;
@@ -5149,17 +5153,17 @@ hr.fat {
   width: auto;
   font-size: .8em;
 }
-.ui-menu .ui-menu-child .divider,
-.ui-menu.ui-menu-dynamic .ui-menu-list .divider {
+.ui-menu .ui-menu-child .ui-separator,
+.ui-menu.ui-menu-dynamic .ui-menu-list .ui-separator {
   padding: 0;
   height: 1px;
   margin: 0 1px;
   overflow: hidden;
-  background-color: #f2f2f2;
+  background-color: #e5e5e5;
 }
-.ui-menu .ui-menu-child .divider:hover,
-.ui-menu.ui-menu-dynamic .ui-menu-list .divider:hover {
-  background-color: #f2f2f2;
+.ui-menu .ui-menu-child .ui-separator:hover,
+.ui-menu.ui-menu-dynamic .ui-menu-list .ui-separator:hover {
+  background-color: #ffffff;
 }
 .ui-menu .ui-menu-child .ui-menu-child,
 .ui-menu.ui-menu-dynamic .ui-menu-list .ui-menu-child {
