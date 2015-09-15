@@ -84,9 +84,9 @@
                                 </div>
 
                                 <br/>
-                                <label>Console:</label>
+                                <label for="selectManyCheckbox">Console:</label>
                                 <br/>
-                                <p:selectManyCheckbox id="basic" class="input-control">
+                                <p:selectManyCheckbox id="selectManyCheckbox" class="input-control">
                                     <f:selectItem itemLabel="Xbox One" itemValue="Xbox One"/>
                                     <f:selectItem itemLabel="PS4" itemValue="PS4" />
                                     <f:selectItem itemLabel="Wii U" itemValue="Wii U" />
@@ -140,12 +140,45 @@
                     <div class="grid">
                         <div class="row cells3">                           
                             <div class="cell input-control">
-                                <h:outputLabel value="Variable  " />
-                                <p:inputSwitch onLabel="On" offLabel="Off" />
+                                <h:outputLabel value="Variable  " for="switch1_input"/>
+                                <p:inputSwitch onLabel="On" offLabel="Off" id="switch1"/>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+                <!--****************************************************************************-->
+                <br/>
+                <hr class="thin"/>
+                <br/><br/>
+                <h3>Spinner</h3>
+                <div class="example" data-text="example">
+                    <div class="grid">
+                        <div class="row cells3">                           
+                            <div class="cell input-control">
+                                <p:outputLabel for="basic" value="Basic Spinner: " />
+                                <p:spinner id="basic" />
+                            </div>
+                            <div class="cell input-control">
+                                <p:outputLabel for="step" value="Step Factor: " />
+                                <p:spinner id="step" stepFactor="0.25" />
+                            </div>
+                            <div class="cell input-control">
+                                <p:outputLabel for="minMax" value="Min/Max: " />
+                                <p:spinner id="minMax" min="0" max="100" />
+                            </div>
+                        </div>
+                        <div class="row cells3">  
+                            <div class="cell input-control">
+                                <p:outputLabel for="prefix" value="Prefix: " />
+                                <p:spinner id="prefix" prefix="$" min="0" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <br/><br/>
                 <p:commandButton value="Save" update="form1" icon="fa-check" class="primary" />
 

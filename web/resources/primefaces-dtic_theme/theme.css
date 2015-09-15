@@ -7134,6 +7134,9 @@ a.shortcut-button {
   margin: .325rem 0;
   line-height: 1;
 }
+.input-control label {
+  display: block;
+}
 .input-control.full-size {
   width: 100% !important;
 }
@@ -7527,6 +7530,54 @@ a.shortcut-button {
   -webkit-transform: translateX(2rem);
   transform: translateX(2rem);
   transition: all 0.2s linear;
+}
+.input-control .ui-spinner .ui-spinner-input {
+  text-align: left;
+  padding: 7px 9px !important;
+}
+.input-control .ui-spinner .ui-spinner-up .ui-button-text,
+.input-control .ui-spinner .ui-spinner-down .ui-button-text {
+  padding: 0 !important;
+  font-size: 12px;
+}
+.input-control .ui-spinner .ui-spinner-up .ui-button-text:before,
+.input-control .ui-spinner .ui-spinner-down .ui-button-text:before {
+  font-family: 'dcmuce';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.input-control .ui-spinner .ui-spinner-up {
+  margin: 1px 1px 0px !important;
+}
+.input-control .ui-spinner .ui-spinner-up .ui-button-text:before {
+  content: "\f077";
+}
+.input-control .ui-spinner .ui-spinner-down {
+  margin: 0px 1px 1px !important;
+}
+.input-control .ui-spinner .ui-spinner-down .ui-button-text:before {
+  content: "\f078";
+}
+.input-control .ui-spinner .ui-spinner-button {
+  width: auto;
+  height: 17px;
+  margin: 2px 3px 2px 0px;
+  border-radius: 0px !important;
+  cursor: pointer;
+  border: none;
+  padding: 0px 10px 1px 10px !important;
+}
+.input-control .ui-spinner .ui-spinner-button.ui-state-hover,
+.input-control .ui-spinner .ui-spinner-button.ui-state-active {
+  background-color: #e0e0e0 !important;
+  border: none;
 }
 .input-control.file input[type=file] {
   position: absolute;
