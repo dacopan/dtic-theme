@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../templates/mainTemplate.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Dt1c Theme | Grid" />
+        </ui:define>
+        <ui:define name="content">
+            <h:form>
+                <!-- contenido de la página-->
+                <h1>Grid</h1>
+                <style>
+                    .demo-grid .row > .cell {
+                        padding: 10px;
+                        background-color: darkgray;
+                        color: white;
+                        text-align: center;
+                        border: 1px #000 solid;
+                    }
+                    .pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:2px;border:1px solid #888}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
+
+                    .prettyprint {
+                        background-color: #eeeeee;
+                        border: 0 !important;
+                        border-width: 1px !important;
+                        border-color: #eeeeee !important;
+                        border-left: 8px #555555 solid !important;
+                    }
+
+                    .prettyprint ol {
+                        background-color: transparent !important;
+                    }
+
+                    .prettyprint li {background-color: white !important; list-style-type: decimal !important; padding-left: 1em; border-bottom: 1px #eee solid;}
+                    .prettyprint li:last-child{border-bottom: 0;}
+                    .prettyprint code .tag {
+                        font-size: .7rem;
+                    }
+
+                    .prettyprint {
+                        overflow: hidden;
+                        overflow-x: scroll;
+                    }
+
+
+                </style>
+
+
+
+                <div class="container page-content">
+
+                    <div class="margin20 no-margin-left no-margin-right sub-header text-light">
+                        Metro UI CSS includes a responsive fluid grid system that appropriately scales up to 12 columns. It includes predefined classes for easy layout options.
+                    </div>
+
+                    <div class="example" data-text="example">
+                        <h5>Default grid</h5>
+                        <div class="grid demo-grid">
+                            <div class="row cells3">
+                                <div class="cell debug">1</div>
+                                <div class="cell debug">2</div>
+                                <div class="cell debug">3</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell debug">1</div>
+                                <div class="cell debug colspan10">2</div>
+                                <div class="cell debug">3</div>
+                            </div>
+                            <div class="row cells5">
+                                <div class="cell debug">1</div>
+                                <div class="cell debug colspan3">2</div>
+                                <div class="cell debug">3</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell debug">1</div>
+                                <div class="cell debug">2</div>
+                                <div class="cell debug">3</div>
+                                <div class="cell debug">4</div>
+                                <div class="cell debug">5</div>
+                                <div class="cell debug">6</div>
+                                <div class="cell debug">7</div>
+                                <div class="cell debug">8</div>
+                                <div class="cell debug">9</div>
+                                <div class="cell debug">10</div>
+                                <div class="cell debug">11</div>
+                                <div class="cell debug">12</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example" data-text="example">
+                        <h5>Offset for default grid</h5>
+                        <div class="grid demo-grid">
+                            <div class="row cells12">
+                                <div class="cell offset11">offset11</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset10 colspan2">offset10</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset9 colspan3">offset9</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset8 colspan4">offset8</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset7 colspan5">offset7</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset6 colspan6">offset6</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset5 colspan7">offset5</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset4 colspan8">offset4</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset3 colspan9">offset3</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset2 colspan10">offset2</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset1 colspan11">offset1</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">no offset</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example" data-text="example">
+                        <h5>Condensed grid</h5>
+                        <div class="grid condensed demo-grid">
+                            <div class="row cells3">
+                                <div class="cell debug">1</div>
+                                <div class="cell debug">2</div>
+                                <div class="cell debug">3</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell debug">1</div>
+                                <div class="cell debug colspan10">2</div>
+                                <div class="cell debug">3</div>
+                            </div>
+                            <div class="row cells5">
+                                <div class="cell debug">1</div>
+                                <div class="cell debug colspan3">2</div>
+                                <div class="cell debug">3</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell debug">1</div>
+                                <div class="cell debug">2</div>
+                                <div class="cell debug">3</div>
+                                <div class="cell debug">4</div>
+                                <div class="cell debug">5</div>
+                                <div class="cell debug">6</div>
+                                <div class="cell debug">7</div>
+                                <div class="cell debug">8</div>
+                                <div class="cell debug">9</div>
+                                <div class="cell debug">10</div>
+                                <div class="cell debug">11</div>
+                                <div class="cell debug">12</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example" data-text="example">
+                        <h5>Offset for condensed grid</h5>
+                        <div class="grid condensed demo-grid">
+                            <div class="row cells12">
+                                <div class="cell offset11">offset11</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset10 colspan2">offset10</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset9 colspan3">offset9</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset8 colspan4">offset8</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset7 colspan5">offset7</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset6 colspan6">offset6</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset5 colspan7">offset5</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset4 colspan8">offset4</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset3 colspan9">offset3</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset2 colspan10">offset2</div>
+                            </div>
+                            <div class="row cells12">
+                                <div class="cell offset1 colspan11">offset1</div>
+                            </div>
+                            <div class="row">
+                                <div class="cell">no offset</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Introduction</h3>
+                    <p>
+                        Grid systems are used to create page layouts through a series of rows and columns that house your content. Here's how the grid system works:
+                    </p>
+                    <ul>
+                        <li>Rows must be placed within a <span class="tag info">.grid</span> container</li>
+                        <li>Use rows to create horizontal groups of columns (container with class <span class="tag info">.row</span>).</li>
+                        <li>Content should be placed within columns (container with class <span class="tag info">.cell</span>).</li>
+                        <li>Default row contain one cell</li>
+                        <li>To define cells count use builtin classes <span class="tag info">.cells2</span> ... <span class="tag info">.cells12</span> for row.</li>
+                        <li>To create grid without cell margin, add class <span class="tag info">.condensed</span> to grid main container</li>
+                        <li>Cells can extended and take the place of multiple cells using the classes <span class="tag info">.colspan2</span> ... <span class="tag info">.colspan12</span> </li>
+                    </ul>
+
+                    <div class="example" data-text="code">
+                        <h5>HTML</h5>
+                        <pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"grid"</span><span class="tag">&gt;</span></code></li><li class="L1"><code><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row cellsN"</span><span class="tag">&gt;</span></code></li><li class="L2"><code><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L3"><code><span class="pln">        ...</span></code></li><li class="L4"><code><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L5"><code><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></code></li><li class="L6"><code><span class="tag">&lt;/div&gt;</span></code></li></ol></pre>
+
+            <h5>Grid with one cell in row</h5>
+            <pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"grid"</span><span class="tag">&gt;</span></code></li><li class="L1"><code><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></code></li><li class="L2"><code><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L3"><code><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></code></li><li class="L4"><code><span class="tag">&lt;/div&gt;</span></code></li></ol></pre>
+
+            <h5>Grid with four cells in a row</h5>
+            <pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"grid"</span><span class="tag">&gt;</span></code></li><li class="L1"><code><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row cells4"</span><span class="tag">&gt;</span></code></li><li class="L2"><code><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L3"><code><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L4"><code><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L5"><code><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L6"><code><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></code></li><li class="L7"><code><span class="tag">&lt;/div&gt;</span></code></li></ol></pre>
+
+            <h5>Grid with two cells in a row and one cell extended over three size</h5>
+            <pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"grid"</span><span class="tag">&gt;</span></code></li><li class="L1"><code><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row cells4"</span><span class="tag">&gt;</span></code></li><li class="L2"><code><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L3"><code><span class="pln">        </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"cell colspan3"</span><span class="tag">&gt;&lt;/div&gt;</span></code></li><li class="L4"><code><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></code></li><li class="L5"><code><span class="tag">&lt;/div&gt;</span></code></li></ol></pre>
+        </div>
+    </div>
+                
+                
+                
+                
+                
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>

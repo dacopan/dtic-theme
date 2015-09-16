@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../templates/mainTemplate.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Dt1c Theme | Tables" />
+        </ui:define>
+        <ui:define name="content">
+            <h:form>
+                <!-- contenido de la página-->
+                <h1>Tables</h1>
+                <style>
+                    .demo-grid .row > .cell {
+                        padding: 10px;
+                        background-color: darkgray;
+                        color: white;
+                        text-align: center;
+                        border: 1px #000 solid;
+                    }
+                    .pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{padding:2px;border:1px solid #888}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
+
+                    .prettyprint {
+                        background-color: #eeeeee;
+                        border: 0 !important;
+                        border-width: 1px !important;
+                        border-color: #eeeeee !important;
+                        border-left: 8px #555555 solid !important;
+                    }
+
+                    .prettyprint ol {
+                        background-color: transparent !important;
+                    }
+
+                    .prettyprint li {background-color: white !important; list-style-type: decimal !important; padding-left: 1em; border-bottom: 1px #eee solid;}
+                    .prettyprint li:last-child{border-bottom: 0;}
+                    .prettyprint code .tag {
+                        font-size: .7rem;
+                    }
+
+                    .prettyprint {
+                        overflow: hidden;
+                        overflow-x: scroll;
+                    }
+
+
+                </style>
+                <h3>Main demo</h3>
+                <p>
+                    Switch on to enable Metro UI CSS table.
+                </p>                
+                <div class="padding20 bg-grayLighter">
+
+                    <div class="input-control padding10 ">
+                        off
+                        <p:inputSwitch  onchange="$('#main_table_demo').toggleClass('table'); $('#main_table_demo_keys').toggleClass('no-display')"/>                                                
+                        on
+                    </div>
+
+                    <div class="inline-block no-display" id="main_table_demo_keys">
+                        <div class="input-control checkbox small-check no-margin">
+                            <p:selectBooleanCheckbox onchange="$('#main_table_demo').toggleClass('striped')"/>
+                            <span class="check"></span>
+                            <span class="caption">striped</span>
+                        </div>
+                        <div class="input-control no-margin">
+                            <p:selectBooleanCheckbox onchange="$('#main_table_demo').toggleClass('hovered')"/>
+                            <span class="check"></span>
+                            <span class="caption">hovered</span>
+                        </div>
+                        <div class="input-control checkbox small-check no-margin">
+                            <p:selectBooleanCheckbox onchange="$('#main_table_demo').toggleClass('cell-hovered')"/>
+                            <span class="check"></span>
+                            <span class="caption">cell-hovered</span>
+                        </div>
+                        <div class="input-control checkbox small-check no-margin">
+                            <p:selectBooleanCheckbox onchange="$('#main_table_demo').toggleClass('border')"/>
+                            <span class="check"></span>
+                            <span class="caption">border</span>
+                        </div>
+                        <div class="input-control checkbox small-check no-margin">
+                            <p:selectBooleanCheckbox onchange="$('#main_table_demo').toggleClass('bordered')" value="false"/>
+                            <span class="check"></span>
+                            <span class="caption">bordered</span>
+                        </div>
+                    </div>
+                </div>
+
+                <br/>
+
+                <div class="example" data-text="table">
+                    <table class="" id="main_table_demo">
+                        <thead>
+                            <tr>
+                                <th>Header 1</th>
+                                <th>Header 2</th>
+                                <th>Header 3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>a</td>
+                                <td>b</td>
+                                <td>c</td>
+                            </tr>
+                            <tr>
+                                <td>a</td>
+                                <td>b</td>
+                                <td>c</td>
+                            </tr>
+                            <tr>
+                                <td>a</td>
+                                <td>b</td>
+                                <td>c</td>
+                            </tr>
+                            <tr>
+                                <td>a</td>
+                                <td>b</td>
+                                <td>c</td>
+                            </tr>
+                            <tr>
+                                <td>a</td>
+                                <td>b</td>
+                                <td>c</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <br/>
+                <h5>Main class</h5>
+                <p>
+                    To enable Metro UI CSS table style, you must add class <span class="tag info">table</span> to you table element.
+                </p>
+                <div class="example" data-text="code">
+
+                    <pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code><span class="tag">&lt;table</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"table"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/table&gt;</span></code></li></ol></pre>
+                </div>
+                <h5>Additional classes</h5>
+                <p>
+                    To enable any futures you can add sub-classes: <span class="tag">striped</span>, <span class="tag">hovered</span>, <span class="tag">cell-hovered</span>, <span class="tag">border</span>, <span class="tag">bordered</span>,  to you table element.
+                </p>
+
+                <div class="example" data-text="code">
+<pre class="prettyprint linenums prettyprinted"><ol class="linenums"><li class="L0"><code><span class="tag">&lt;table</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"table striped hovered cell-hovered border bordered"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/table&gt;</span></code></li></ol></pre>                    
+        </div>
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
