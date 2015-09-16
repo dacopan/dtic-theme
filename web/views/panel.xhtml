@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../templates/mainTemplate.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Dt1c Theme | Panel" />
+        </ui:define>
+        <ui:define name="content">
+            <h:form>
+                <!-- contenido de la página-->
+                <h1>Panel</h1>
+                <h2> Accordion</h2>
+                <h3>Basic</h3>
+                <p:accordionPanel>
+                    <p:tab title="Star Wras Part I">
+                        <div class="grid">
+                            <div class="row cells5">
+                                <div class="cell"><img alt="padme" src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg" /></div>
+                                <div class="cell colspan4"><h:outputText value="The story begins as Don Vito Corleone..." /></div>
+                            </div>
+                        </div>                        
+                    </p:tab>
+                    <p:tab title="Star Wras Part II">
+                        <div class="grid">
+                            <div class="row cells5">
+                                <div class="cell"><img alt="padme" src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg" /></div>
+                                <div class="cell colspan4"><h:outputText value="Francis Ford Coppola's legendary..." /></div>
+                            </div>
+                        </div> 
+
+                    </p:tab>
+                    <p:tab title="Star Wras Part III">
+                        <div class="grid">
+                            <div class="row cells5">
+                                <div class="cell"><img alt="padme" src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg" /></div>
+                                <div class="cell colspan4"><h:outputText value="After a break of more than 15 years..." /></div>
+                            </div>
+                        </div>                         
+                    </p:tab>
+                </p:accordionPanel>
+
+                <h3>Multiple Selection</h3>
+                <p:accordionPanel multiple="true">
+                    <p:tab title="Star Wras Part I">
+                        <div class="grid">
+                            <div class="row cells5">
+                                <div class="cell"><img alt="padme" src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg" /></div>
+                                <div class="cell colspan4"><h:outputText value="The story begins as Don Vito Corleone..." /></div>
+                            </div>
+                        </div>                        
+                    </p:tab>
+                    <p:tab title="Star Wras Part II">
+                        <div class="grid">
+                            <div class="row cells5">
+                                <div class="cell"><img alt="padme" src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg" /></div>
+                                <div class="cell colspan4"><h:outputText value="Francis Ford Coppola's legendary..." /></div>
+                            </div>
+                        </div> 
+
+                    </p:tab>
+                    <p:tab title="Star Wras Part III">
+                        <div class="grid">
+                            <div class="row cells5">
+                                <div class="cell"><img alt="padme" src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg" /></div>
+                                <div class="cell colspan4"><h:outputText value="After a break of more than 15 years..." /></div>
+                            </div>
+                        </div>                         
+                    </p:tab>
+                </p:accordionPanel>
+                <!--****************************************************************************-->
+                <br/>
+                <hr class="thin"/>
+                <br/><br/>
+                <h2>Panel</h2>
+                <h3>Basic</h3>
+                <p:panel header="Basic" footer="Movie Details" style="margin-bottom:20px">
+                    <div class="grid padding10">
+                        <div class="row cells5">
+                            <div class="cell"><img alt="padme" src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg" /></div>
+                            <div class="cell colspan4"><h:outputText value="Francis Ford Coppola's legendary..." /></div>
+                        </div>
+                    </div> 
+                </p:panel>
+
+
+                <h3>Toggleable</h3>
+                <p:panel toggleable="true" closable="true" toggleSpeed="500" closeSpeed="500" header="Basic" footer="Movie Details" style="margin-bottom:20px">
+                    <div class="grid padding10">
+                        <div class="row cells5">
+                            <div class="cell"><img alt="padme" src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg" /></div>
+                            <div class="cell colspan4"><h:outputText value="Francis Ford Coppola's legendary..." /></div>
+                        </div>
+                    </div> 
+                </p:panel>
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
