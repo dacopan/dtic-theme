@@ -1,0 +1,30 @@
+{
+    "name": "dt1c-theme",
+    "version": "1.0.0",
+    "description": "Dt1c theme to primefaces 5.2",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dacopan/dtic-theme.git"
+    },
+    "keywords": [
+        "primefaces",
+        "dt1c",
+        "metro"
+    ],
+    "author": "dacopanCM",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/dacopan/dtic-theme/issues"
+    },
+    "homepage": "https://github.com/dacopan/dtic-theme#readme",
+    "dependencies": {
+        "gulp-concat": "*",
+        "gulp-less": "*",
+        "gulp-minify-css": "*",
+        "gulp-uglify": "*"
+    }
+}
