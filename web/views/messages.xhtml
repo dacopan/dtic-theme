@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../templates/mainTemplate.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Dt1c Theme | Messages" />
+        </ui:define>
+        <ui:define name="content">
+            
+                <!-- contenido de la página-->
+                <h1>Messages</h1>
+
+
+                <p:tooltip />
+
+                <h:form>
+                    <p:messages id="messages" showDetail="true" autoUpdate="true" closable="true" >
+                        <p:effect event="load" type="fade" delay="300">
+                             <f:param name="mode" value="'show'" />
+                             <f:param name="times" value="1"/>
+                        </p:effect>
+                    </p:messages>
+
+                    <p:commandButton value="Info" actionListener="#{messagesView.info}" />
+                    <p:commandButton value="Warn" actionListener="#{messagesView.warn}" />
+                    <p:commandButton value="Error" actionListener="#{messagesView.error}" />
+                    <p:commandButton value="Fatal" actionListener="#{messagesView.fatal}" />
+                </h:form>
+
+                <p:separator />
+
+                <h:form>
+                    <h:panelGrid id="grid" columns="3" cellpadding="5">
+                        <p:outputLabel for="default" value="Default:" />
+                        <p:inputText id="default" required="true" />
+                        <p:message for="default" />
+
+                        <p:outputLabel for="txt" value="Text:" />
+                        <p:inputText id="txt" required="true" />
+                        <p:message for="txt" display="text" />
+
+                        <p:outputLabel for="icon" value="Icon:" />
+                        <p:inputText id="icon" required="true" />
+                        <p:message for="icon" display="icon" />
+
+                        <p:outputLabel for="tt" value="Tooltip:" />
+                        <p:inputText id="tt" required="true" />
+                        <p:message for="tt" display="tooltip" />
+                    </h:panelGrid>
+
+                    <p:commandButton id="submitButton" value="Submit" update="grid" />
+                </h:form>
+
+            
+        </ui:define>
+
+    </ui:composition>
+</html>
