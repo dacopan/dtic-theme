@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" 
       xmlns:p="http://primefaces.org/ui"
       >
     <h:head>
@@ -12,6 +13,7 @@
         <script src="../resources/assets/js/widgets/_metro.js"></script>
         <script src="../resources/assets/js/widgets/inputswitch.js"></script>-->
         <script src="../resources/primefaces-dtic_theme/js/dt1ctheme.js"></script>
+        <script src="../resources/assets/js/widgets/inputswitch.js"></script>
 
         <title><ui:insert name="title" /></title>
     </h:head>
@@ -22,12 +24,12 @@
                 <ui:include src="menu.xhtml"/>
             </div>
 
-            <div id="content" class="container page-content">
+            <p:outputPanel layout="block" id="content" class="container page-content" style="opacity: 0">                                
                 <p:growl id="messages" sticky="true"/>
                 <ui:insert name="content">
                     <span>Página en construcción</span>
                 </ui:insert>
-            </div>
+            </p:outputPanel>
 
             <div id="footer">
                 <p><a href="#">©</a></p>

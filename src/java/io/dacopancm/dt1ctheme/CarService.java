@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 
@@ -37,7 +38,8 @@ public class CarService {
         brands = new String[10];
         brands[0] = "BMW";
         brands[1] = "Mercedes";
-        brands[2] = "Volvo";
+        brands[2] = "Swichtc sk iohs iohos";
+        //brands[2] = "Volvo";
         brands[3] = "Audi";
         brands[4] = "Renault";
         brands[5] = "Fiat";
@@ -47,12 +49,39 @@ public class CarService {
         brands[9] = "Ford";
     }
 
+    private List<Car> cars;
+    private List<Car> moreCars;
+
+    public List<Car> getMoreCars() {
+        return moreCars;
+    }
+
+    public void setMoreCars(List<Car> moreCars) {
+        this.moreCars = moreCars;
+    }
+
+    public List<Car> getCars() {
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
+    }
+
+    @PostConstruct
+    public void init() {
+        cars = createCars(5);
+        moreCars = createCars(15);
+    }
+
     public List<Car> createCars(int size) {
         List<Car> list = new ArrayList<Car>();
+        size = size - 2;
+        list.add(new Car(getRandomId(), getRandomBrand(), getRandomYear(), getRandomColor(), getRandomPrice(), getRandomSoldState()));
+        list.add(new Car(getRandomId(), brands[2], getRandomYear(), getRandomColor(), getRandomPrice(), getRandomSoldState()));
         for (int i = 0; i < size; i++) {
             list.add(new Car(getRandomId(), getRandomBrand(), getRandomYear(), getRandomColor(), getRandomPrice(), getRandomSoldState()));
         }
-
         return list;
     }
 

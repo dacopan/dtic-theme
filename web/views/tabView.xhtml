@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../templates/mainTemplate.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Dt1c Theme | TabView" />
+        </ui:define>
+        <ui:define name="content">
+            <h:form>
+                <!-- contenido de la página-->
+                <h1>TabView</h1>
+
+                <p:effect type="fade" event="load" delay="300" for="tabview1">
+                    <f:param name="mode" value="'show'" />
+                </p:effect>
+
+
+                <h3>Basic</h3>
+                <p:tabView id="tabview1" style="display: none;" effect="fade"  value="#{carService.cars}" var="car">
+
+                    <p:tab title="#{car.brand} - #{car.id}" closable="#{car.soldState}">
+                        <div class="grid">
+                            <div class="row cells5">
+                                <div class="cell"><img alt="padme" src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg" /></div>
+                                <div class="cell colspan4"><h:outputText value="The story begins as Don Vito Corleone..." />
+                                    <br/>
+                                    <h:outputText value="Brand:" style="font-weight: bold"/>
+                                    <h:outputText value="#{car.brand}" />
+                                </div>
+                            </div>
+                        </div>                        
+                    </p:tab>    
+
+                </p:tabView>
+
+
+                <h3>Scrollable</h3>
+
+
+
+                <p:tabView id="tabview2" value="#{carService.moreCars}" var="car" scrollable="true" effect="slide">                    
+                    <p:tab title="#{car.brand} - #{car.id}" closable="#{car.soldState}">
+                        <div class="grid">
+                            <div class="row cells5">
+                                <div class="cell"><img alt="padme" src="http://media.moddb.com/images/groups/1/7/6322/padme-amidala_800x600.jpg" /></div>
+                                <div class="cell colspan4"><h:outputText value="The story begins as Don Vito Corleone..." />
+                                    <br/>
+                                    <h:outputText value="Brand:" style="font-weight: bold"/>
+                                    <h:outputText value="#{car.brand}" />
+                                </div>
+                            </div>
+                        </div>                        
+                    </p:tab>    
+
+                </p:tabView>
+
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>

@@ -20,4 +20,14 @@
 
 $(function () {
     $.Metro.initAppBar($('body'));
+    console.log("showing content1");
+    setTimeout(function() {
+        console.log("showing content");
+        $("#content").animate({
+            opacity: 1
+        }, {
+            queue: false,
+            duration: 350
+        });
+    }, 300);
 });
