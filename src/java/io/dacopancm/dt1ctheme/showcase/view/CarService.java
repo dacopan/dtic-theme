@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package io.dacopancm.dt1ctheme;
+package io.dacopancm.dt1ctheme.showcase.view;
 
-import io.dacopancm.dt1ctheme.model.Car;
+import io.dacopancm.dt1ctheme.showcase.model.Car;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
