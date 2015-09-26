@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition template="../templates/mainTemplate.xhtml">
+        <ui:define name="title">
+            <h:outputText value="Dt1c Theme | Dialogs" />
+        </ui:define>
+        <ui:define name="content">
+            <h:form>
+                <!-- contenido de la página-->
+                <h1>Dialogs</h1>
+                <h3>Confirm Dialog</h3>
+                <p:growl id="message" showDetail="true" />
+
+                <p:commandButton class="info" value="Destroy the World" actionListener="#{dialogView.destroyWorld}" update="message">
+                    <p:confirm header="Destruir el mundo actual" message="Esta seguro de destruir el mundo actual?" icon="fa-warning"/>
+                </p:commandButton>
+
+                <p:confirmDialog global="true" showEffect="fade" hideEffect="fade" class="windows-style">
+                    <p:commandButton value="Si, hazlo" type="button" styleClass="ui-confirmdialog-yes primary" icon="fa-check" />
+                    <p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="fa-close" />
+                </p:confirmDialog>
+
+
+                <hr class="thin"/>
+                <h3>Common</h3>
+
+
+                <p:commandButton class="info margin10R" value="Basic" type="button" onclick="PF('dlg1').show();" />
+
+                <p:commandButton class="info margin10R" value="Modal" type="button" onclick="PF('dlg2').show();" />
+
+                <p:commandButton class="info margin10R" value="Effects" type="button" onclick="PF('dlg3').show();" />                 
+
+                <p:dialog header="Basic Dialog" widgetVar="dlg1" minHeight="40">
+                    <h:outputText value="Resistance to PrimeFaces is futile!" />
+                </p:dialog>
+
+                <p:dialog header="Modal Dialog" widgetVar="dlg2" modal="true" height="100">
+                    <h:outputText value="This is a Modal Dialog." />
+                </p:dialog>   
+
+                <p:dialog header="Effects" widgetVar="dlg3" showEffect="explode" hideEffect="bounce" height="100">
+                    <h:outputText value="This dialog has nice effects." />
+                </p:dialog>
+
+
+                <hr class="thin"/>
+                <h3>Minimize/Maximize</h3>
+                <p:commandButton value="Show Dialog" onclick="PF('dlg').show();" type="button" />
+
+                <p:dialog header="Dialog" widgetVar="dlg" minimizable="true" maximizable="true">
+                    <h:outputText value="This Dialog can be Maximized an Minimized!" />
+                </p:dialog>
+
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
